@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Slick slider -->
+    <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+
+</head>
+
+<body>
+    <div class="home-container">
+        <!-- top org logo and user info -->
+        <div class="top-contaiener">
+            <div class="top-left">
+                <span>
+                    <img src="./images/REClogo.png" alt="" height="55px" width="100px">
+                </span>
+                <span class="heading">
+                    Intranet Portal
+                </span>
+            </div>
+            <div iv class="top-right">
+                <div class="search-box">
+                    <div class="wrapper">
+                        <div class="searchBar">
+                            <input id="searchQueryInput" type="text" name="searchQueryInput" placeholder="Search"
+                                value="" />
+                            <button id="searchQuerySubmit" type="submit" name="searchQuerySubmit">
+                                <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                                    <path fill="#666666"
+                                        d="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="user">
+                    <div class="user-info">
+                        <ul>
+                            <li class="user-name">Name</li>
+                            <li class="user-title">some role</li>
+                        </ul>
+                    </div>
+                    <div class="user-logo">
+                        <img src="./images/userphoto.jpg" alt="" class="user-logo-img">
+                    </div>
+                    <div class="ham-icon" onclick="openNav()">
+                        <i class="fa-solid fa-bars"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- navbar -->
+        <!-- side panel -->
+        <div id="mySidepanel" class="sidepanel">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+            <ul class="mobile-links">
+                <li>HOME</li>
+                <li onclick="toggleDropdown(event)">
+                    DIVISION <i class="fa-solid fa-sort-down"></i>
+                    <ul class="links-dropdown" id="mobile-dropdown">
+                        <li>
+                            <div class="subnav-heading">OUR LEADERSHIP</div>
+                            <ul>
+                                <li>Excecutive Managerment</li>
+                                <li>Board of Directors</li>
+                                <li>CEO Newsletter</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <div class="subnav-heading">OUR VISION</div>
+                            <ul>
+                                <li>Mission and values</li>
+                                <li>The REC Way: Code of Conduct</li>
+                                <li>Environment, Social and Governance</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <div class="subnav-heading">OUR FAMILY</div>
+                            <ul>
+                                <li>Companies in the family</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li onclick="toggleDropdown(event)">REC APPLICATION<i class="fa-solid fa-sort-down"></i>
+                    <ul class="links-dropdown" id="mobile-dropdown">
+                        <li>
+                            <div class="subnav-heading">OUR VISION</div>
+                            <ul>
+                                <li>Mission and values</li>
+                                <li>The Noventiq Way: Code of Conduct</li>
+                                <li>Environment, Social and Governance</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li onclick="toggleDropdown(event)">MIS<i class="fa-solid fa-sort-down"></i>
+                    <ul class="links-dropdown" id="mobile-dropdown">
+                        <li>Mission and values</li>
+                        <li>The Noventiq Way: Code of Conduct</li>
+                        <li>Environment, Social and Governance</li>
+                    </ul>
+                </li>
+                <li>CIRCULAR</li>
+                <li>ORGANIZATION SETUP</li>
+                <li>E-NEWSLETTER</li>
+            </ul>
+        </div>
+        <!-- side panel end -->
+        <nav class="navbar-container">
+            <ul class="navbar-links">
+                <li><a href="#">HOME</a></li>
+                <li>
+                    <a href="#">DIVISION</a>
+                    <ul class="subnav division-subnav">
+                        <div class="subnav-container">
+                            <div class="subnav-subcontainer">
+                                <div class="subnav-heading">OUR LEADERSHIP</div>
+                                <ul>
+                                    <li>Excecutive Managerment</li>
+                                    <li>Board of Directors</li>
+                                    <li>CEO Newsletter</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <div class="subnav-subcontainer">
+                                    <div class="subnav-heading">OUR VISION</div>
+                                    <ul>
+                                        <li>Mission and values</li>
+                                        <li>The REC Way: Code of Conduct</li>
+                                        <li>Environment, Social and Governance</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="subnav-subcontainer">
+                                    <div class="subnav-heading">OUR FAMILY</div>
+                                    <ul>
+                                        <li>Companies in the family</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">REC APPLICATION</a>
+                    <ul class="subnav division-subnav">
+                        <div class="subnav-container">
+                            <div class="subnav-subcontainer">
+                                <div class="subnav-heading">OUR LEADERSHIP</div>
+                                <ul>
+                                    <li>Excecutive Managerment</li>
+                                    <li>Board of Directors</li>
+                                    <li>CEO Newsletter</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">MIS</a>
+                    <ul class="subnav division-subnav">
+                        <div class="subnav-container">
+                            <div class="subnav-subcontainer">
+                                <div class="subnav-heading">OUR VISION</div>
+                                <ul>
+                                    <li>Mission & Values</li>
+                                    <li>The REC Way : Code of Conduct</li>
+                                    <li>Environment, Social and Governance</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">CIRCULAR</a>
+                    <ul class="subnav division-subnav">
+                        <div class="subnav-container">
+                            <div class="subnav-subcontainer">
+                                <div class="subnav-heading">OUR Family</div>
+                                <ul>
+                                    <li>Companies in the family</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </ul>
+                </li>
+                <li><a href="#">ORGANIZATION SETUP</a></li>
+                <li><a href="#">E-NEWSLETTER</a></li>
+                <li style="background-color: white;"><a href="#" style="color: black; font-weight: 600;">ABOUT US</a></li>
+            </ul>
+            <ul class="navbar-icons">
+                <li style="padding: 0 !important;" class="img-icons">
+                    <img src="./images/logos/fb.png" alt="">
+                    <img src="./images/logos/insta.png" alt="">
+                    <img src="./images/logos/linkedin.png" alt="">
+                    <img src="./images/logos/x.jpg" alt="" style="height: 30px;">
+                </li>
+                <li class="lang">
+                    <span class="lang-eng">
+                        Eng
+                    </span>/
+                    <span class="lang-hindi">
+                        हिन्दी
+                    </span>
+                </li>
+                <li style="padding: 0 !important;">
+                    <div class="font-sizes">
+                        <span class="font-big">A</span>
+                        <span class="font-mid">A</span>
+                        <span class="font-small">A</span>
+                    </div>
+                </li>
+            </ul>
+            <div class="nav-dots">
+                <i class="fa-solid fa-ellipsis"></i>
+                <ul class="subnav subnav-icons">
+                    <div class="subnav-container">
+                        <div class="subnav-subcontainer">
+                            <ul class="dots-subcontainer">
+                                <li style="padding: 0 !important;" class="img-icons">
+                                    <img src="./images/logos/fb.png" alt="">
+                                    <img src="./images/logos/insta.png" alt="">
+                                    <img src="./images/logos/linkedin.png" alt="">
+                                    <img src="./images/logos/x.jpg" alt="" style="height: 30px;">
+                                </li>
+                                <li class="lang">
+                                    <span class="lang-eng">
+                                        Eng
+                                    </span>/
+                                    <span class="lang-hindi">
+                                        हिन्दी
+                                    </span>
+                                </li>
+                                <li style="padding: 0 0 6px 0 !important;">
+                                    <div class="font-sizes">
+                                        <span class="font-big">A</span>
+                                        <span class="font-mid">A</span>
+                                        <span class="font-small">A</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </ul>
+            </div>
+        </nav>
+        <!-- hero container -->
+        <div class="hero-container">
+            <div class="hero-left">
+                <div class="hero-images">
+                    <div class="slider">
+                        <div><img src="./images/hero-images/RECIMG1.jpeg" alt=""></div>
+                        <div><img src="./images/hero-images/RECIMG2.jpeg" alt=""></div>
+                        <div><img src="./images/hero-images/RECIMG3.jpeg" alt=""></div>
+                        <div><img src="./images/hero-images/RECIMG4.jpeg" alt=""></div>
+                    </div>
+                    <div class="announcement-div">
+                        <div class="announce-left">Announcements</div>
+                        <div class="announce-right">
+                            <marquee behavior="sliding" direction="left"> Launching a new initiative to expand solar
+                                energy accessibility.</marquee>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-right">
+                <div class="block">
+                    <div class="block-heading">
+                        <div>
+                            <a href="#">Recent Updates</a>
+                        </div>
+                        <div>
+                            <a href="#">Important Updates</a>
+                        </div>
+                    </div>
+                    <div class="content" style="height: 79.4%;">
+                        <ul>
+                            <li><i class="fa-solid fa-pen"></i>
+                                <p>REC is excited to announce the opening of a new state-of-the-art solar panel
+                                    manufacturing facility in Texas, which will significantly increase production
+                                    capacity and create over 200 jobs.</p>
+                            </li>
+                            <li><i class="fa-solid fa-pen"></i>
+                                <p>REC has secured a $50 million investment to fund new green energy projects, focusing
+                                    on expanding wind and solar farms across the country.</p>
+                            </li>
+                            <li><i class="fa-solid fa-pen"></i>
+                                <p>The construction of our latest wind farm in Iowa is nearing completion, with an
+                                    expected operational date set for August 2024. This project will provide clean
+                                    energy to over 50,000 homes.</p>
+                            </li>
+                            <li><i class="fa-solid fa-pen"></i>
+                                <p>REC is excited to launch the SolarMax 3000 Series, our most efficient solar panels to
+                                    date, offering a 25% increase in energy output compared to previous models.
+                                </p>
+                            </li>
+                            <li><i class="fa-solid fa-pen"></i>
+                                <p>We are proud to introduce our Smart Energy Management System, designed to optimize
+                                    energy usage and enhance efficiency for both residential and commercial customers.
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="bottom-link">
+                        view more...
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Second layer -->
+        <div class="layer-two-container">
+            <div class="divs-second-layer">
+                <div class="layer-two-left">
+                    <div class="divs-container" style="height: 20.2rem;">
+                        <div class="divs-left">
+                            <div class="first" style="height: 20rem;">HR</div>
+                        </div>
+                        <div class="divs-right">
+                            <div class="second">ADMIN</div>
+                            <div class="third">IT</div>
+                            <div class="forth">PCM</div>
+                            <div class="fifth">*USEFUL LINKS</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="layer-two-right">
+                    <div class="divs-container1">
+                        <div class="link-divs">
+                            <div
+                                style="background-image: url('./images/online-documentation-database-document-management-260nw-2305109169.jpg');">
+                            </div>
+                            <div>Villigence Related</div>
+                        </div>
+                        <div class="link-divs">
+                            <div style="background-image: url(./images/rwfrfs.jpg);"></div>
+                            <div>Knowledge Sharing</div>
+                        </div>
+                        <div class="link-divs">
+                            <div style="background-image: url('./images/sdfgsdfg.jpg');"></div>
+                            <div>REC Foundation</div>
+                        </div>
+                        <div class="link-divs">
+                            <div
+                                style="background-image: url('./images/online-school-equipment-home_23-2149041150.avif');">
+                            </div>
+                            <div>ABC</div>
+                        </div>
+                        <div class="link-divs">
+                            <div
+                                style="background-image: url('./images/Modern-Office-Interior-with-Open-Floor-Plan-2048x1365.webp');">
+                            </div>
+                            <div>PQR</div>
+                        </div>
+                        <div class="link-divs">
+                            <div style="background-image: url('./images/desk-b1.jpg');"></div>
+                            <div>XYZ</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- THIRD LAYER  -->
+        <div class="layer-two-container third-layer">
+            <div class="divs-second-layer third-subcontainer">
+                <div class="layer-two-left">
+                    <div class="block-container">
+                        <div>
+                            <div class="block">
+                                <div class="block-main-heading">
+                                    <i class="fa-solid fa-link"></i>
+                                    QUICK LINKS
+                                </div>
+                                <div class="content">
+                                    <ul>
+                                        <li><i class="fa-solid fa-link"></i>
+                                            <p>Basic strategies to manage your finances effectively.</p>
+                                        </li>
+                                        <li><i class="fa-solid fa-link"></i>
+                                            <p>Explore safe and profitable investment opportunities.</p>
+                                        </li>
+                                        <li><i class="fa-solid fa-link"></i>
+                                            <p>Step-by-step instructions on writing a comprehensive research paper.</p>
+                                        </li>
+                                        <li><i class="fa-solid fa-link"></i>
+                                            <p>Fun and easy projects to improve your home.</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="bottom-link">
+                                    view more...
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="block">
+                                <div class="block-main-heading">
+                                    <i class="fa-solid fa-link"></i>
+                                    USEFUL LINKS
+                                </div>
+                                <div class="content">
+                                    <ul>
+                                        <li><i class="fa-solid fa-link"></i>
+                                            <p>REC Intranet Portal Screen.pdf</p>
+                                        </li>
+                                        <li><i class="fa-solid fa-link"></i>
+                                            <p>Free_Test_Data_500KB_PDF.pdf</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="bottom-link">
+                                    view more...
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="block">
+                                <div class="block-main-heading">
+                                    <i class="fa-solid fa-star"></i>
+                                    SUPER REC
+                                </div>
+                                <div class="content">
+                                    <ul>
+                                        <li><i class="fa-solid fa-arrow-right"></i>
+                                            <p>The RCC Foundation is proud to announce the awarding of $2 million in
+                                                grants to support community-led renewable energy projects across the
+                                                country. These grants will fund solar, wind, and other sustainable
+                                                energy initiatives.
+                                            </p>
+                                        </li>
+                                        <li><i class="fa-solid fa-arrow-right"></i>
+                                            <p>We are excited to introduce our new scholarship program, aimed at
+                                                supporting students pursuing degrees in renewable energy and
+                                                sustainability. Applications are now open for the 2024 academic year.
+                                            </p>
+                                        </li>
+                                        <li><i class="fa-solid fa-arrow-right"></i>
+                                            <p>The RCC Foundation is celebrating its 10th anniversary this year. Over
+                                                the past decade, we have supported over 150 community projects and
+                                                invested more than $15 million in renewable energy initiatives.</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="bottom-link">
+                                    view more...
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="layer-two-right">
+                    <div class="layer-two-right-container">
+                        <div class="block"
+                            style="background-color: transparent; filter:drop-shadow(0 0 5px rgba(57, 57, 57, 0)  )">
+                            <div class="col-flex">
+                                <div class="box">
+                                    <div class="block">
+                                        <div class="block-main-heading">
+                                            <i></i>
+                                            BIRTHDAYS
+                                        </div>
+                                        <div class="birthdaySuperannuation-content">
+                                            <div class="content" style="height: 100%;">
+                                                <ul>
+                                                    <li><i class="fa-solid fa-cake-candles"></i>
+                                                        <p>Emily Green - January 5th</p>
+                                                    </li>
+                                                    <li><i class="fa-solid fa-cake-candles"></i>
+                                                        <p>John Doe - February 14th</p>
+                                                    </li>
+                                                    <li><i class="fa-solid fa-cake-candles"></i>
+                                                        <p>Sarah White - March 22nd</p>
+                                                    </li>
+                                                    <li><i class="fa-solid fa-cake-candles"></i>
+                                                        <p>Jessica Blue - May 18th</p>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="box">
+                                    <div class="block">
+                                        <div class="block-main-heading" style="border-radius: 5px 5px 0 0;">
+                                            <i></i>
+                                            SUPERANNUATION
+                                        </div>
+                                        <div class="birthdaySuperannuation-content">
+                                            <div class="content" style="height: 100%;">
+                                                <ul>
+                                                    <li><i class="fa-solid fa-arrow-right"></i>
+                                                        <p>Jane Smith - Birthdate: 1985-07-15</p>
+                                                    </li>
+                                                    <li><i class="fa-solid fa-arrow-right"></i>
+                                                        <p>Michael Johnson - Birthdate: 1978-04-22</p>
+                                                    </li>
+                                                    <li><i class="fa-solid fa-arrow-right"></i>
+                                                        <p>Emily Williams - Birthdate: 1990-11-10</p>
+                                                    </li>
+                                                    <li><i class="fa-solid fa-arrow-right"></i>
+                                                        <p>Daniel Brown - Birthdate: 1982-09-05</p>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Slick JS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.slider').slick({
+                infinite: true,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 2000,
+                prevArrow: '<button type="button" class="slick-prev">Previous</button>',
+                nextArrow: '<button type="button" class="slick-next">Next</button>',
+            });
+        });
+        function openNav() {
+            document.getElementById("mySidepanel").style.width = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidepanel").style.width = "0";
+        }
+
+        // mobile dropdown
+        function openNav() {
+            document.getElementById("mySidepanel").style.width = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidepanel").style.width = "0";
+        }
+
+        function toggleDropdown(event) {
+            event.stopPropagation(); // Prevent the click from bubbling up to other elements
+            let dropdown = event.currentTarget.querySelector('.links-dropdown');
+            dropdown.classList.toggle('show');
+        }
+
+        document.addEventListener('click', function (event) {
+            // Close all dropdowns if the user clicks outside of them
+            let dropdowns = document.querySelectorAll('.links-dropdown.show');
+            dropdowns.forEach(dropdown => {
+                if (!dropdown.contains(event.target)) {
+                    dropdown.classList.remove('show');
+                }
+            });
+        });
+
+    </script>
+</body>
+
+</html>
